@@ -1,0 +1,16 @@
+.p-badge {
+  .p-badge-content {
+  }
+
+  .p-badge-button {
+    border: none;
+    background-color: #fff;
+    margin-left: 1rem;
+    color: #999;
+    font-size: 0.75rem;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}

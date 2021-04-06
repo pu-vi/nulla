@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { InputText } from "../common/form";
 import { ImCheckmark, ImCross } from "react-icons/im";
+import { Badge } from "../common/display";
 
 const Items = ({ items = [], updateItems }) => {
   const [item, updateItem] = useState("");
@@ -14,15 +15,12 @@ const Items = ({ items = [], updateItems }) => {
       <ul>
         {items.map((i, index) => (
           <li key={index}>
-            {i}
-            <button className="btn btn-outline-secondary border-0">
-              &#10005;
-            </button>
+            <Badge value={i} />
           </li>
         ))}
       </ul>
 
-      <div className="form-inline mt-4">
+      <div className="form-inline mt-5">
         <InputText
           value={item}
           className="form-control-sm"
