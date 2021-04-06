@@ -13,9 +13,7 @@ const Items = ({ items = [], updateItems }) => {
         ))}
       </ul>
 
-      <div className="text-center">
-        <AddItem items={items} updateItems={updateItems} />
-      </div>
+      <AddItem items={items} updateItems={updateItems} />
     </>
   );
 };

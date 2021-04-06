@@ -10,31 +10,35 @@ const AddItem = ({ items, updateItems }) => {
   };
 
   return (
-    <div className="form-inline mt-5">
-      <InputText
-        value={item}
-        className="form-control-sm"
-        changeHandler={updateItem}
-        placeholder="List item"
-      />
+    <form>
+      <div className="form-inline mt-5">
+        <InputText
+          value={item}
+          className="form-control-sm"
+          changeHandler={updateItem}
+          placeholder="List item"
+        />
 
-      <div className="form-group">
-        <button
-          className="btn btn-sm btn-outline-success border-0 ml-2"
-          onClick={addToList}
-        >
-          <ImCheckmark />
-        </button>
-        <button
-          className="btn btn-sm btn-outline-danger border-0 ml-2"
-          onClick={(e) => {
-            updateItem("");
-          }}
-        >
-          <ImCross />
-        </button>
+        <div className="form-group">
+          <button
+            type="submit"
+            className="btn btn-sm btn-outline-success border-0 ml-2"
+            onClick={addToList}
+          >
+            <ImCheckmark />
+          </button>
+          <button
+            type="button"
+            className="btn btn-sm btn-outline-danger border-0 ml-2"
+            onClick={(e) => {
+              updateItem("");
+            }}
+          >
+            <ImCross />
+          </button>
+        </div>
       </div>
-    </div>
+    </form>
   );
 };
 
