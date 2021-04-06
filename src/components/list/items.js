@@ -15,7 +15,7 @@ const Items = ({ items = [], updateItems }) => {
       <ul>
         {items.map((i, index) => (
           <li key={index}>
-            <Badge value={i} />
+            <Badge value={i} remove={() => {}} />
           </li>
         ))}
       </ul>
